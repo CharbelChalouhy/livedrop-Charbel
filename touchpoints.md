@@ -6,10 +6,10 @@ This document defines the two AI-powered user experiences selected for implement
 
 ## 1. FAQ Assistant
 
-### 📌 Problem
+###  Problem
 Users frequently abandon support flows due to hard-to-navigate static FAQ sections. This touchpoint provides contextual, AI-generated answers from `FAQ.md`.
 
-### ✅ Happy Path Flow
+###  Happy Path Flow
 1. User opens "Help" and starts typing a question.
 2. The typed question is sent to an AI endpoint.
 3. The endpoint passes the question + parsed `FAQ.md` content to the model.
@@ -21,30 +21,30 @@ Users frequently abandon support flows due to hard-to-navigate static FAQ sectio
 9. Daily metrics are collected on: Match confidence, Escalation rate, Resolution rate
 10. Model is periodically retrained with user feedback.
 
-### 🧠 Guardrails
+###  Guardrails
 - Inputs strictly limited to `FAQ.md`
 - Output max 300 characters
 - Answers include a link to full FAQ article
 - No policy fabrication (evals used)
 
-### 🧍 Human-in-the-loop
+###  Human-in-the-loop
 - If confidence < threshold → escalate to human
 - “Talk to someone” always visible
 
-### 🔐 PII Considerations
+###  PII Considerations
 - Strip emails/order numbers/names from logs & prompts
 
-### 📈 Metrics
+###  Metrics
 - Deflection rate, latency, escalation rate
 
 ---
 
 ## 2. Smart Search Suggestions
 
-### 📌 Problem
+###  Problem
 Users often type incomplete or ambiguous queries and abandon search. AI-enhanced suggestions can increase relevance and product discovery.
 
-### ✅ Happy Path Flow
+###  Happy Path Flow
 1. User starts typing in search bar.
 2. After 2 characters, input is sent to AI.
 3. AI uses product metadata to generate suggestions.
@@ -52,15 +52,15 @@ Users often type incomplete or ambiguous queries and abandon search. AI-enhanced
 5. UI displays suggestions.
 6. User clicks → regular search triggered.
 
-### 🧠 Guardrails
+###  Guardrails
 - Inputs: ≤10 tokens, only product metadata
 - Latency: ≤300ms
 - Outputs: 3 plain strings max
 
-### 🔍 Metrics
+###  Metrics
 - Typeahead CTR
 - Search-to-cart conversion
 - Avg latency (p95)
 
-### 🔐 PII Considerations
+###  PII Considerations
 - No logging of user queries unless anonymized
