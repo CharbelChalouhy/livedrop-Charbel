@@ -43,3 +43,37 @@ See [`models/schema.sql`](models/schema.sql)
 ##  Design Tradeoffs
 
 See [`docs/tradeoffs.md`](docs/tradeoffs.md)
+
+## Assignment 3: ShopLite RAG Assistant
+
+This section contains the **RAG (Retrieval-Augmented Generation)** assistant built for ShopLite — enabling intelligent FAQ and product support search from markdown files.
+
+ **Author:** Charbel Chalouhy  
+ Week 3 Assignment — AI-First Initiative
+
+###  Project Files
+
+shoplite-rag-assistant/
+├── docs/prompting/
+│ ├── knowledge-base.md
+│ ├── ground-truth-qa.md
+│ ├── assistant-prompts.yml
+│ └── evals.md
+├── notebooks/
+│ └── llm-deployment.ipynb
+└── src/
+└── chat-interface.py
+###  Run Instructions
+
+```bash
+pip install faiss-cpu sentence-transformers flask transformers pyyaml
+python src/chat-interface.py
+
+
+
+
+
+
+
+
+
