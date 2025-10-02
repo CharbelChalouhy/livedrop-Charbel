@@ -52,7 +52,7 @@ This section contains the **RAG (Retrieval-Augmented Generation)** assistant bui
  Week 3 Assignment — AI-First Initiative
 
 ###  Project Files
-
+```
 shoplite-rag-assistant/
 ├── docs/prompting/
 │ ├── knowledge-base.md
@@ -63,6 +63,7 @@ shoplite-rag-assistant/
 │ └── llm-deployment.ipynb
 └── src/
 └── chat-interface.py
+```
 ###  Run Instructions
 
 ```bash
