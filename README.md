@@ -44,37 +44,99 @@ See [`models/schema.sql`](models/schema.sql)
 
 See [`docs/tradeoffs.md`](docs/tradeoffs.md)
 
+---
+
 ## Assignment 3: ShopLite RAG Assistant
 
 This section contains the **RAG (Retrieval-Augmented Generation)** assistant built for ShopLite — enabling intelligent FAQ and product support search from markdown files.
 
- **Author:** Charbel Chalouhy  
- Week 3 Assignment — AI-First Initiative
+**Author:** Charbel Chalouhy  
+Week 3 Assignment — AI-First Initiative
 
 ###  Project Files
+
 ```
 shoplite-rag-assistant/
 ├── docs/prompting/
-│ ├── knowledge-base.md
-│ ├── ground-truth-qa.md
-│ ├── assistant-prompts.yml
-│ └── evals.md
+│   ├── knowledge-base.md
+│   ├── ground-truth-qa.md
+│   ├── assistant-prompts.yml
+│   └── evals.md
 ├── notebooks/
-│ └── llm-deployment.ipynb
+│   └── llm-deployment.ipynb
 └── src/
-└── chat-interface.py
+    └── chat-interface.py
 ```
+
 ###  Run Instructions
 
 ```bash
 pip install faiss-cpu sentence-transformers flask transformers pyyaml
 python src/chat-interface.py
+```
 
+---
 
+## Assignment 4: LiveDrop Storefront (Frontend)
 
+This is the final assignment — implementing a fully functional, AI-powered storefront for LiveDrop using **Next.js**, with optional OpenAI integration for AI-powered product discovery.
 
+### Features
 
+- Built with **Next.js 14 (App Router)**
+- Fully styled with **Tailwind CSS**
+- Local dev server with `.env.example` included
+- AI assistant-ready structure
+- Uses Vercel AI SDK + OpenAI if desired
 
+### Folder Structure
 
+```
+Assignment-4/
+└── apps/
+    └── storefront/
+        ├── app/
+        ├── components/
+        ├── public/
+        ├── styles/
+        ├── .env.example
+        ├── package.json
+        ├── tsconfig.json
+        ├── tailwind.config.ts
+        └── README.md
+```
+
+###  Running the Storefront Locally
+
+1. Go to the directory:
+   ```bash
+   cd Assignment-4/apps/storefront
+   ```
+
+2. Copy the environment config:
+   ```bash
+   cp .env.example .env
+   ```
+
+3. Install dependencies:
+   ```bash
+   pnpm install
+   # or
+   npm install
+   ```
+
+4. Start the dev server:
+   ```bash
+   pnpm dev
+   # or
+   npm run dev
+   ```
+
+5. Open your browser at:
+   ```
+   http://localhost:3000
+   ```
+
+---
 
 
