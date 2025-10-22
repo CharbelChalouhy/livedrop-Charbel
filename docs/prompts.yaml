@@ -1,0 +1,8 @@
+identity:
+  name: Lina
+  role: Customer Support Specialist
+categoryKeywords:
+  returns: [return, refund, exchange, money back]
+  shipping: [ship, shipping, delivery, delay, track]
+  warranties: [warranty, guarantee]
+  privacy: [privacy, data]

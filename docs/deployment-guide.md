@@ -1,0 +1,1 @@
+Backend: Render; Frontend: Vercel; LLM: ngrok /generate.
